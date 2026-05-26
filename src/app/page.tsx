@@ -15,12 +15,14 @@ export default function SEOWavePage() {
             <a href="#fonctionnalites" style={{ color: "#475569", textDecoration: "none", fontSize: 14, fontWeight: 500 }}>Fonctionnalités</a>
             <a href="#stats" style={{ color: "#475569", textDecoration: "none", fontSize: 14, fontWeight: 500 }}>Résultats</a>
             <a href="#contact" style={{ color: "#475569", textDecoration: "none", fontSize: 14, fontWeight: 500 }}>Contact</a>
-            <a
-              href="mailto:hello@wikolabs.com?subject=SEOWave%20%E2%80%94%20Demande%20de%20d%C3%A9mo"
-              style={{ background: "#16a34a", color: "#fff", padding: "10px 20px", borderRadius: 8, textDecoration: "none", fontSize: 14, fontWeight: 600, fontFamily: "var(--font-display, 'Passion One', cursive)", letterSpacing: 0.5 }}
-            >
-              Lancer ma machine à trafic
-            </a>
+            <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
+              <a href="https://calendly.com/wikolabs" target="_blank" rel="noopener noreferrer" style={{ background: "#16a34a", color: "#fff", padding: "10px 20px", borderRadius: 8, textDecoration: "none", fontSize: 14, fontWeight: 600, fontFamily: "var(--font-display, 'Passion One', cursive)", letterSpacing: 0.5 }}>
+                📅 Réserver un créneau →
+              </a>
+              <a href="https://wa.me/261386626100?text=Bonjour%2C%20je%20souhaite%20discuter%20de%20SEOWave%20avec%20Wikolabs." target="_blank" rel="noopener noreferrer" style={{ background: "#25d366", borderColor: "#25d366", color: "#fff", padding: "10px 20px", borderRadius: 8, textDecoration: "none", fontSize: 14, fontWeight: 600, fontFamily: "var(--font-display, 'Passion One', cursive)", letterSpacing: 0.5 }}>
+                💬 WhatsApp →
+              </a>
+            </div>
           </div>
         </div>
       </nav>
@@ -41,12 +43,14 @@ export default function SEOWavePage() {
               Recherche de mots-clés, rédaction E-E-A-T, publication et monitoring — SEOWave fait tout tourner pendant que vous dormez. Trafic organique en pilote automatique.
             </p>
             <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
-              <a
-                href="mailto:hello@wikolabs.com?subject=SEOWave%20%E2%80%94%20Demande%20de%20d%C3%A9mo"
-                style={{ background: "#16a34a", color: "#fff", padding: "14px 28px", borderRadius: 10, textDecoration: "none", fontSize: 15, fontWeight: 700, fontFamily: "var(--font-display, 'Passion One', cursive)", letterSpacing: 0.5 }}
-              >
-                Lancer ma machine à trafic →
-              </a>
+              <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
+                <a href="https://calendly.com/wikolabs" target="_blank" rel="noopener noreferrer" style={{ background: "#16a34a", color: "#fff", padding: "14px 28px", borderRadius: 10, textDecoration: "none", fontSize: 15, fontWeight: 700, fontFamily: "var(--font-display, 'Passion One', cursive)", letterSpacing: 0.5 }}>
+                  📅 Réserver un créneau →
+                </a>
+                <a href="https://wa.me/261386626100?text=Bonjour%2C%20je%20souhaite%20discuter%20de%20SEOWave%20avec%20Wikolabs." target="_blank" rel="noopener noreferrer" style={{ background: "#25d366", borderColor: "#25d366", color: "#fff", padding: "14px 28px", borderRadius: 10, textDecoration: "none", fontSize: 15, fontWeight: 700, fontFamily: "var(--font-display, 'Passion One', cursive)", letterSpacing: 0.5 }}>
+                  💬 WhatsApp →
+                </a>
+              </div>
               <a
                 href="#fonctionnalites"
                 style={{ background: "#fff", color: "#16a34a", padding: "14px 28px", borderRadius: 10, textDecoration: "none", fontSize: 15, fontWeight: 600, border: "2px solid #bbf7d0" }}
@@ -214,12 +218,14 @@ export default function SEOWavePage() {
           <p style={{ fontSize: 16, color: "#bbf7d0", margin: "0 0 36px", lineHeight: 1.7 }}>
             Rejoignez les équipes qui ont multiplié leur trafic par 4 sans recruter un seul rédacteur. Démo personnalisée sur votre secteur — sans engagement.
           </p>
-          <a
-            href="mailto:hello@wikolabs.com?subject=SEOWave%20%E2%80%94%20Demande%20de%20d%C3%A9mo"
-            style={{ display: "inline-block", background: "#ffffff", color: "#16a34a", padding: "16px 36px", borderRadius: 12, textDecoration: "none", fontSize: 16, fontWeight: 700, fontFamily: "var(--font-display, 'Passion One', cursive)", letterSpacing: 0.5 }}
-          >
-            Lancer ma machine à trafic →
-          </a>
+          <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
+            <a href="https://calendly.com/wikolabs" target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", background: "#ffffff", color: "#16a34a", padding: "16px 36px", borderRadius: 12, textDecoration: "none", fontSize: 16, fontWeight: 700, fontFamily: "var(--font-display, 'Passion One', cursive)", letterSpacing: 0.5 }}>
+              📅 Réserver un créneau →
+            </a>
+            <a href="https://wa.me/261386626100?text=Bonjour%2C%20je%20souhaite%20discuter%20de%20SEOWave%20avec%20Wikolabs." target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", background: "#25d366", borderColor: "#25d366", color: "#fff", padding: "16px 36px", borderRadius: 12, textDecoration: "none", fontSize: 16, fontWeight: 700, fontFamily: "var(--font-display, 'Passion One', cursive)", letterSpacing: 0.5 }}>
+              💬 WhatsApp →
+            </a>
+          </div>
           <div style={{ marginTop: 20, fontSize: 13, color: "#86efac" }}>
             Réponse sous 24h · Audit de niche offert · Aucun CB requis
           </div>
