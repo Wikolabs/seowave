@@ -1,4 +1,4 @@
-export default function SEOWavePage() {
+﻿export default function SEOWavePage() {
   return (
     <div style={{ fontFamily: "var(--font-body, 'Poppins', sans-serif)", background: "#f0fdf4", minHeight: "100vh", color: "#1e293b" }}>
 
@@ -246,7 +246,7 @@ export default function SEOWavePage() {
             <a href="https://wikolabs.com" style={{ color: "#86efac", textDecoration: "none" }}>Wikolabs</a>
           </div>
           <div style={{ display: "flex", gap: 24 }}>
-            <a href="mailto:hello@wikolabs.com" style={{ color: "#4ade80", fontSize: 13, textDecoration: "none" }}>Contact</a>
+            <a href="mailto:team@wikolabs.com" style={{ color: "#4ade80", fontSize: 13, textDecoration: "none" }}>Contact</a>
             <a href="#fonctionnalites" style={{ color: "#4ade80", fontSize: 13, textDecoration: "none" }}>Fonctionnalités</a>
           </div>
         </div>
