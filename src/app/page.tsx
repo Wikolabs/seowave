@@ -245,9 +245,12 @@
             © 2025 SEOWave — Un produit{" "}
             <a href="https://wikolabs.com" style={{ color: "#86efac", textDecoration: "none" }}>Wikolabs</a>
           </div>
-          <div style={{ display: "flex", gap: 24 }}>
-            <a href="mailto:team@wikolabs.com" style={{ color: "#4ade80", fontSize: 13, textDecoration: "none" }}>Contact</a>
-            <a href="#fonctionnalites" style={{ color: "#4ade80", fontSize: 13, textDecoration: "none" }}>Fonctionnalités</a>
+          <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
+            <a href="mailto:team@wikolabs.com" style={{ color: "#4ade80", fontSize: 13, textDecoration: "none" }}>team@wikolabs.com</a>
+            <span style={{ color: "#4ade80" }}>·</span>
+            <a href="tel:+261386626100" style={{ color: "#4ade80", fontSize: 13, textDecoration: "none" }}>+261 38 66 261 00</a>
+            <span style={{ color: "#4ade80" }}>·</span>
+            <a href="https://calendly.com/wikolabs" target="_blank" rel="noopener noreferrer" style={{ color: "#4ade80", fontSize: 13, textDecoration: "none" }}>Prendre RDV</a>
           </div>
         </div>
       </footer>
