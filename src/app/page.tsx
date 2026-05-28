@@ -16,9 +16,9 @@
             <a href="#stats" style={{ color: "#475569", textDecoration: "none", fontSize: 14, fontWeight: 500 }}>Résultats</a>
             <a href="#contact" style={{ color: "#475569", textDecoration: "none", fontSize: 14, fontWeight: 500 }}>Contact</a>
             <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
-              <a href="https://calendly.com/wikolabs" target="_blank" rel="noopener noreferrer" style={{ background: "#16a34a", color: "#fff", padding: "10px 20px", borderRadius: 8, textDecoration: "none", fontSize: 14, fontWeight: 600, fontFamily: "var(--font-display, 'Passion One', cursive)", letterSpacing: 0.5 }}>
+              <button data-cal-link="wikolabs-team/30min" data-cal-namespace="wk30min" data-cal-config='{"layout":"month_view"}' type="button" target="_blank" rel="noopener noreferrer" style={{ background: "#16a34a", color: "#fff", padding: "10px 20px", borderRadius: 8, textDecoration: "none", fontSize: 14, fontWeight: 600, fontFamily: "var(--font-display, 'Passion One', cursive)", letterSpacing: 0.5 }}>
                 📅 Réserver un créneau →
-              </a>
+              </button>
               <a href="https://wa.me/261386626100?text=Bonjour%2C%20je%20souhaite%20discuter%20de%20SEOWave%20avec%20Wikolabs." target="_blank" rel="noopener noreferrer" style={{ background: "#25d366", borderColor: "#25d366", color: "#fff", padding: "10px 20px", borderRadius: 8, textDecoration: "none", fontSize: 14, fontWeight: 600, fontFamily: "var(--font-display, 'Passion One', cursive)", letterSpacing: 0.5 }}>
                 💬 WhatsApp →
               </a>
@@ -44,9 +44,9 @@
             </p>
             <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
               <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
-                <a href="https://calendly.com/wikolabs" target="_blank" rel="noopener noreferrer" style={{ background: "#16a34a", color: "#fff", padding: "14px 28px", borderRadius: 10, textDecoration: "none", fontSize: 15, fontWeight: 700, fontFamily: "var(--font-display, 'Passion One', cursive)", letterSpacing: 0.5 }}>
+                <button data-cal-link="wikolabs-team/30min" data-cal-namespace="wk30min" data-cal-config='{"layout":"month_view"}' type="button" target="_blank" rel="noopener noreferrer" style={{ background: "#16a34a", color: "#fff", padding: "14px 28px", borderRadius: 10, textDecoration: "none", fontSize: 15, fontWeight: 700, fontFamily: "var(--font-display, 'Passion One', cursive)", letterSpacing: 0.5 }}>
                   📅 Réserver un créneau →
-                </a>
+                </button>
                 <a href="https://wa.me/261386626100?text=Bonjour%2C%20je%20souhaite%20discuter%20de%20SEOWave%20avec%20Wikolabs." target="_blank" rel="noopener noreferrer" style={{ background: "#25d366", borderColor: "#25d366", color: "#fff", padding: "14px 28px", borderRadius: 10, textDecoration: "none", fontSize: 15, fontWeight: 700, fontFamily: "var(--font-display, 'Passion One', cursive)", letterSpacing: 0.5 }}>
                   💬 WhatsApp →
                 </a>
@@ -219,9 +219,9 @@
             Rejoignez les équipes qui ont multiplié leur trafic par 4 sans recruter un seul rédacteur. Démo personnalisée sur votre secteur — sans engagement.
           </p>
           <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
-            <a href="https://calendly.com/wikolabs" target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", background: "#ffffff", color: "#16a34a", padding: "16px 36px", borderRadius: 12, textDecoration: "none", fontSize: 16, fontWeight: 700, fontFamily: "var(--font-display, 'Passion One', cursive)", letterSpacing: 0.5 }}>
+            <button data-cal-link="wikolabs-team/30min" data-cal-namespace="wk30min" data-cal-config='{"layout":"month_view"}' type="button" target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", background: "#ffffff", color: "#16a34a", padding: "16px 36px", borderRadius: 12, textDecoration: "none", fontSize: 16, fontWeight: 700, fontFamily: "var(--font-display, 'Passion One', cursive)", letterSpacing: 0.5 }}>
               📅 Réserver un créneau →
-            </a>
+            </button>
             <a href="https://wa.me/261386626100?text=Bonjour%2C%20je%20souhaite%20discuter%20de%20SEOWave%20avec%20Wikolabs." target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", background: "#25d366", borderColor: "#25d366", color: "#fff", padding: "16px 36px", borderRadius: 12, textDecoration: "none", fontSize: 16, fontWeight: 700, fontFamily: "var(--font-display, 'Passion One', cursive)", letterSpacing: 0.5 }}>
               💬 WhatsApp →
             </a>
