@@ -15,21 +15,9 @@ services:
       GROQ_API_KEY: ${GROQ_API_KEY:-}
       GEMINI_API_KEY: ${GEMINI_API_KEY:-}
     networks:
-      - seowave-net
-
-  seowave:
-    image: ghcr.io/wikolabs/seowave:latest
-    container_name: seowave
-    restart: unless-stopped
-    ports:
-      - "3027:3000"
-    environment:
-      BACKEND_URL: "http://seowave-backend:8000"
-    depends_on:
-      - seowave-backend
-    networks:
-      - seowave-net
-
+  wkdemo_net:
+    name: wkdemo-net
+    external: true
 networks:
   seowave-net:
     name: seowave-net
