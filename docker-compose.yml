@@ -1,0 +1,36 @@
+version: "3.9"
+
+# SEOWave demo — production-ready POC.
+# 2 services orchestrated:
+#   - seowave (Next.js frontend on host port 3027)
+#   - seowave-backend (FastAPI Python, internal only on 8000)
+# Internal network so the frontend can reach the backend by service name.
+
+services:
+  seowave-backend:
+    image: ghcr.io/wikolabs/seowave-backend:latest
+    container_name: seowave-backend
+    restart: unless-stopped
+    environment:
+      GROQ_API_KEY: ${GROQ_API_KEY:-}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+    networks:
+      - seowave-net
+
+  seowave:
+    image: ghcr.io/wikolabs/seowave:latest
+    container_name: seowave
+    restart: unless-stopped
+    ports:
+      - "3027:3000"
+    environment:
+      BACKEND_URL: "http://seowave-backend:8000"
+    depends_on:
+      - seowave-backend
+    networks:
+      - seowave-net
+
+networks:
+  seowave-net:
+    name: seowave-net
+    driver: bridge
