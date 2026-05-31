@@ -1,260 +1,231 @@
-﻿export default function SEOWavePage() {
+﻿"use client";
+
+const P = {
+  name: "SEOWave",
+  tagLabel: "Content factory IA · 100 articles/mois · Pilote automatique",
+  taglines: ["Votre blog publie.", "Votre trafic explose.", "Sans lever le petit doigt."],
+  taglineAccentIdx: 1,
+  desc: "SEOWave recherche les mots-cles, redige des articles E-E-A-T, les publie sur votre CMS et monitore les rankings — entierement en automatique, chaque mois.",
+  accent: "#34D399",
+  accentDim: "rgba(52,211,153,0.1)",
+  accentBorder: "rgba(52,211,153,0.25)",
+  accentGlow: "rgba(52,211,153,0.12)",
+  waText: "SEOWave",
+  navLinks: [
+    { label: "Fonctionnalites", href: "#features" },
+    { label: "Comment ca marche", href: "#process" },
+    { label: "Contact", href: "#cta" },
+  ],
+  metrics: [
+    { value: "+340%", label: "trafic organique" },
+    { value: "100", label: "articles / mois" },
+    { value: "0", label: "redacteur requis" },
+    { value: "72h", label: "mise en service" },
+  ],
+  features: [
+    { icon: "🔍", title: "Recherche de mots-cles IA", desc: "Gap analysis vs concurrents, opportunity scoring, clustering thematique. SEOWave trouve les mots-cles que vous rateriez a la main." },
+    { icon: "✍️", title: "Redaction SEO automatique", desc: "Articles E-E-A-T compliant, NLP optimise pour les moteurs. Schema markup JSON-LD inclus. Chaque article unique, source et verifie." },
+    { icon: "📈", title: "Publication & monitoring", desc: "Sync WordPress/Webflow en un clic. Ranking tracker en temps reel. Mise a jour automatique quand l'algorithme change ou le contenu vieillit." },
+  ],
+  steps: [
+    { num: "01", title: "Audit de votre niche", desc: "SEOWave analyse votre secteur, vos concurrents et vos lacunes editoriales en moins d'une heure. Interface visuelle, aucun code." },
+    { num: "02", title: "Plan editorial IA", desc: "100 sujets prioritaires classes par potentiel trafic, difficulte et intention de recherche. Valide en un clic." },
+    { num: "03", title: "Redaction & publication continues", desc: "Les articles sont rediges, optimises et publies automatiquement chaque mois. Rankings monitorés et mis a jour en continu." },
+  ],
+  testimonials: [
+    { quote: "En 4 mois avec SEOWave, nous sommes passes de 800 a 11 000 visites organiques par mois. Aucun redacteur recrute, zero effort editorial de notre cote.", author: "Camille R.", role: "Directrice Marketing, SaaS B2B" },
+    { quote: "On a double notre pipeline inbound en 6 mois grace au volume et a la pertinence des articles. SEOWave comprend vraiment notre secteur.", author: "Thomas V.", role: "CEO, Agence Growth" },
+  ],
+  ctaTitle: "Vos 100 premiers articles ce mois-ci",
+  ctaDesc: "Configuration en 72h. Publication automatique. Resultats en 90 jours. Aucune carte bancaire.",
+  ctaPrimary: "Reserver un creneau",
+  footerTagline: "Contenu SEO IA — 100 articles/mois en pilote automatique",
+};
+
+export default function Page() {
+  const bg = "#04080F";
+  const bg2 = "#070D1B";
+  const card = "rgba(255,255,255,0.04)";
+  const border = "rgba(255,255,255,0.09)";
+  const gold = "#D4AF37";
+  const goldDim = "rgba(212,175,55,0.1)";
+  const goldBorder = "rgba(212,175,55,0.28)";
+  const txt1 = "#F0EDE6";
+  const txt2 = "#8B9DB5";
+  const txt3 = "#3C5068";
+  const { accent, accentDim, accentBorder, accentGlow } = P;
+
   return (
-    <div style={{ fontFamily: "var(--font-body, 'Poppins', sans-serif)", background: "#f0fdf4", minHeight: "100vh", color: "#1e293b" }}>
+    <div style={{ minHeight: "100vh", background: bg, color: txt1 }}>
+      <style>{`
+        *, *::before, *::after { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+        @keyframes fadeUp { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
+        @keyframes pulseDot { 0%,100%{ opacity:1; transform:scale(1); } 50%{ opacity:.4; transform:scale(1.6); } }
+        .wk-card { transition: background .3s, border-color .3s, transform .35s cubic-bezier(.34,1.2,.64,1); }
+        .wk-card:hover { background: rgba(255,255,255,0.07) !important; border-color: ${accentBorder} !important; transform: translateY(-6px) !important; }
+        .wk-btn { transition: opacity .2s, transform .2s, box-shadow .2s; }
+        .wk-btn:hover { opacity:.9; transform:translateY(-2px); box-shadow:0 12px 32px rgba(212,175,55,.18); }
+        .wk-wa { transition: opacity .2s, transform .2s; }
+        .wk-wa:hover { opacity:.9; transform:translateY(-2px); }
+        .wk-nav-link { color: #8B9DB5; text-decoration:none; font-size:14px; font-weight:500; transition:color .2s; }
+        .wk-nav-link:hover { color: #F0EDE6; }
+        @media(max-width:640px){ .wk-hide-sm{ display:none!important; } .wk-hero-title{ font-size:2.4rem!important; } }
+      `}</style>
 
       {/* NAVBAR */}
-      <nav style={{ background: "#ffffff", borderBottom: "1px solid #bbf7d0", position: "fixed", top: 0, left: 0, right: 0, zIndex: 50 }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 24px", display: "flex", alignItems: "center", justifyContent: "space-between", height: 64 }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-            <div style={{ width: 32, height: 32, background: "#16a34a", borderRadius: 8, display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <span style={{ color: "#fff", fontSize: 16 }}>〜</span>
-            </div>
-            <span style={{ fontFamily: "var(--font-display, 'Passion One', cursive)", fontWeight: 700, fontSize: 22, color: "#16a34a", letterSpacing: 1 }}>SEOWave</span>
+      <nav style={{ position:"sticky", top:0, zIndex:100, background:"rgba(4,8,15,0.82)", backdropFilter:"blur(20px)", borderBottom:`1px solid ${border}`, padding:"0 40px", height:60, display:"flex", alignItems:"center", justifyContent:"space-between" }}>
+        <span style={{ fontSize:18, fontWeight:800, letterSpacing:"-0.5px", color:txt1 }}>
+          {P.name}<span style={{ color:gold }}>.</span>
+        </span>
+        <div style={{ display:"flex", gap:28, alignItems:"center" }}>
+          <div className="wk-hide-sm" style={{ display:"flex", gap:24 }}>
+            {P.navLinks.map(l => <a key={l.label} href={l.href} className="wk-nav-link">{l.label}</a>)}
           </div>
-          <div style={{ display: "flex", alignItems: "center", gap: 32 }}>
-            <a href="#fonctionnalites" style={{ color: "#475569", textDecoration: "none", fontSize: 14, fontWeight: 500 }}>Fonctionnalités</a>
-            <a href="#stats" style={{ color: "#475569", textDecoration: "none", fontSize: 14, fontWeight: 500 }}>Résultats</a>
-            <a href="#contact" style={{ color: "#475569", textDecoration: "none", fontSize: 14, fontWeight: 500 }}>Contact</a>
-            <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
-              <button data-cal-link="wikolabs-team/30min" data-cal-namespace="wk30min" data-cal-config='{"layout":"month_view"}' type="button" target="_blank" rel="noopener noreferrer" style={{ background: "#16a34a", color: "#fff", padding: "10px 20px", borderRadius: 8, textDecoration: "none", fontSize: 14, fontWeight: 600, fontFamily: "var(--font-display, 'Passion One', cursive)", letterSpacing: 0.5 }}>
-                📅 Réserver un créneau →
-              </button>
-              <a href="https://wa.me/261386626100?text=Bonjour%2C%20je%20souhaite%20discuter%20de%20SEOWave%20avec%20Wikolabs." target="_blank" rel="noopener noreferrer" style={{ background: "#25d366", borderColor: "#25d366", color: "#fff", padding: "10px 20px", borderRadius: 8, textDecoration: "none", fontSize: 14, fontWeight: 600, fontFamily: "var(--font-display, 'Passion One', cursive)", letterSpacing: 0.5 }}>
-                💬 WhatsApp →
-              </a>
-            </div>
-          </div>
+          <button data-cal-link="wikolabs-team/30min" data-cal-namespace="wk30min" data-cal-config='{"layout":"month_view"}' className="wk-btn"
+            style={{ background:gold, color:"#04080F", border:"none", borderRadius:8, padding:"8px 18px", fontWeight:700, fontSize:13.5, cursor:"pointer", fontFamily:"inherit" }}>
+            Reserver →
+          </button>
         </div>
       </nav>
 
       {/* HERO */}
-      <section style={{ paddingTop: 120, paddingBottom: 80, paddingLeft: 24, paddingRight: 24 }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "center" }}>
-          <div>
-            <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#dcfce7", color: "#16a34a", padding: "6px 14px", borderRadius: 20, fontSize: 12, fontWeight: 600, marginBottom: 20, letterSpacing: 0.5 }}>
-              <span style={{ width: 8, height: 8, background: "#16a34a", borderRadius: "50%", display: "inline-block" }}></span>
-              CONTENT FACTORY IA
+      <section style={{ padding:"100px 40px 80px", maxWidth:1000, margin:"0 auto", textAlign:"center", position:"relative" }}>
+        <div style={{ position:"absolute", top:-60, left:"50%", transform:"translateX(-50%)", width:700, height:600, background:`radial-gradient(ellipse at 50% 30%, ${accentGlow} 0%, transparent 60%)`, pointerEvents:"none" }} />
+        <div style={{ display:"inline-flex", alignItems:"center", gap:8, marginBottom:24, background:accentDim, border:`1px solid ${accentBorder}`, borderRadius:100, padding:"6px 18px", animation:"fadeUp .5s ease both" }}>
+          <span style={{ width:7, height:7, borderRadius:"50%", background:accent, display:"inline-block", animation:"pulseDot 2s ease-in-out infinite" }} />
+          <span style={{ color:accent, fontSize:11.5, fontWeight:700, letterSpacing:"2px", textTransform:"uppercase" }}>{P.tagLabel}</span>
+        </div>
+        <h1 className="wk-hero-title" style={{ fontSize:"clamp(2.6rem,6vw,5rem)", fontWeight:700, lineHeight:1.08, letterSpacing:"-0.03em", marginBottom:28, fontFamily:"'Instrument Serif',Georgia,serif", animation:"fadeUp .5s .08s ease both" }}>
+          {P.taglines.map((line, i) => (
+            <span key={i} style={{ display:"block", color:i===P.taglineAccentIdx?accent:txt1, fontStyle:i===P.taglineAccentIdx?"italic":"normal" }}>{line}</span>
+          ))}
+        </h1>
+        <p style={{ fontSize:"1.1rem", color:txt2, lineHeight:1.72, maxWidth:580, margin:"0 auto 48px", animation:"fadeUp .5s .16s ease both" }}>{P.desc}</p>
+        <div style={{ display:"flex", flexWrap:"wrap", justifyContent:"center", gap:14, marginBottom:44, animation:"fadeUp .5s .24s ease both" }}>
+          {P.metrics.map(m => (
+            <div key={m.label} style={{ background:card, border:`1px solid ${border}`, borderRadius:18, padding:"14px 22px", textAlign:"center", minWidth:118 }}>
+              <div style={{ fontSize:"1.7rem", fontWeight:800, color:txt1, letterSpacing:"-1.5px", lineHeight:1 }}>{m.value}</div>
+              <div style={{ fontSize:"0.62rem", color:txt3, textTransform:"uppercase", letterSpacing:"1.5px", marginTop:5 }}>{m.label}</div>
             </div>
-            <h1 style={{ fontFamily: "var(--font-display, 'Passion One', cursive)", fontSize: 48, fontWeight: 700, lineHeight: 1.1, color: "#0f172a", margin: "0 0 20px", letterSpacing: 0.5 }}>
-              100 articles SEO optimisés livrés chaque mois —{" "}
-              <span style={{ color: "#16a34a" }}>automatiquement</span>
-            </h1>
-            <p style={{ fontSize: 17, color: "#475569", lineHeight: 1.7, margin: "0 0 36px" }}>
-              Recherche de mots-clés, rédaction E-E-A-T, publication et monitoring — SEOWave fait tout tourner pendant que vous dormez. Trafic organique en pilote automatique.
-            </p>
-            <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
-              <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
-                <button data-cal-link="wikolabs-team/30min" data-cal-namespace="wk30min" data-cal-config='{"layout":"month_view"}' type="button" target="_blank" rel="noopener noreferrer" style={{ background: "#16a34a", color: "#fff", padding: "14px 28px", borderRadius: 10, textDecoration: "none", fontSize: 15, fontWeight: 700, fontFamily: "var(--font-display, 'Passion One', cursive)", letterSpacing: 0.5 }}>
-                  📅 Réserver un créneau →
-                </button>
-                <a href="https://wa.me/261386626100?text=Bonjour%2C%20je%20souhaite%20discuter%20de%20SEOWave%20avec%20Wikolabs." target="_blank" rel="noopener noreferrer" style={{ background: "#25d366", borderColor: "#25d366", color: "#fff", padding: "14px 28px", borderRadius: 10, textDecoration: "none", fontSize: 15, fontWeight: 700, fontFamily: "var(--font-display, 'Passion One', cursive)", letterSpacing: 0.5 }}>
-                  💬 WhatsApp →
-                </a>
-              </div>
-              <a
-                href="#fonctionnalites"
-                style={{ background: "#fff", color: "#16a34a", padding: "14px 28px", borderRadius: 10, textDecoration: "none", fontSize: 15, fontWeight: 600, border: "2px solid #bbf7d0" }}
-              >
-                Voir un exemple
-              </a>
-            </div>
-          </div>
-
-          {/* HERO VISUAL — Content Calendar */}
-          <div style={{ background: "#ffffff", borderRadius: 16, padding: 24, boxShadow: "0 24px 64px rgba(22,163,74,0.15)", border: "1px solid #bbf7d0" }}>
-            {/* Header */}
-            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 16 }}>
-              <span style={{ fontFamily: "var(--font-display, 'Passion One', cursive)", fontSize: 14, fontWeight: 700, color: "#0f172a", letterSpacing: 0.5 }}>Calendrier éditorial — Mai 2025</span>
-              <span style={{ background: "#dcfce7", color: "#16a34a", fontSize: 11, fontWeight: 700, padding: "3px 10px", borderRadius: 12 }}>100 articles/mois</span>
-            </div>
-
-            {/* Article cards grid */}
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 20 }}>
-              {[
-                { title: "10 meilleurs CRM pour PME 2025", traffic: "+2 400 visites/mois", diff: "34", status: "Publié ✓", statusColor: "#16a34a", statusBg: "#dcfce7" },
-                { title: "Comment automatiser sa prospection B2B", traffic: "+1 800 visites/mois", diff: "28", status: "Publié ✓", statusColor: "#16a34a", statusBg: "#dcfce7" },
-                { title: "Guide complet LinkedIn Ads 2025", traffic: "+3 100 visites/mois", diff: "41", status: "En rédaction", statusColor: "#d97706", statusBg: "#fef3c7" },
-                { title: "Meilleur logiciel de facturation freelance", traffic: "+900 visites/mois", diff: "22", status: "Planifié", statusColor: "#6366f1", statusBg: "#ede9fe" },
-              ].map((card) => (
-                <div key={card.title} style={{ background: "#f8fafc", borderRadius: 10, padding: 12, border: "1px solid #e2e8f0" }}>
-                  <div style={{ fontSize: 11, fontWeight: 600, color: "#0f172a", lineHeight: 1.4, marginBottom: 8 }}>{card.title}</div>
-                  <div style={{ background: "#dcfce7", color: "#16a34a", fontSize: 10, fontWeight: 700, padding: "2px 7px", borderRadius: 8, display: "inline-block", marginBottom: 5 }}>
-                    {card.traffic}
-                  </div>
-                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-                    <span style={{ fontSize: 10, color: "#94a3b8" }}>Difficulté: <span style={{ color: "#475569", fontWeight: 600 }}>{card.diff}</span></span>
-                    <span style={{ background: card.statusBg, color: card.statusColor, fontSize: 9, fontWeight: 700, padding: "2px 7px", borderRadius: 8 }}>{card.status}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Trend chart */}
-            <div style={{ background: "#f0fdf4", borderRadius: 10, padding: "12px 14px", border: "1px solid #bbf7d0" }}>
-              <div style={{ fontSize: 10, fontWeight: 700, color: "#16a34a", marginBottom: 10, letterSpacing: 0.5 }}>TRAFIC ORGANIQUE +340% EN 6 MOIS</div>
-              <div style={{ display: "flex", alignItems: "flex-end", gap: 6, height: 44 }}>
-                {[18, 24, 30, 38, 50, 65, 80, 100].map((h, i) => (
-                  <div key={i} style={{ flex: 1, background: `rgba(22,163,74,${0.3 + i * 0.1})`, borderRadius: "3px 3px 0 0", height: `${h}%`, transition: "height 0.3s" }}></div>
-                ))}
-              </div>
-              <div style={{ display: "flex", justifyContent: "space-between", marginTop: 5 }}>
-                {["Nov", "Déc", "Jan", "Fév", "Mar", "Avr", "Mai", "Jun"].map((m) => (
-                  <span key={m} style={{ fontSize: 8, color: "#94a3b8", flex: 1, textAlign: "center" }}>{m}</span>
-                ))}
-              </div>
-            </div>
-          </div>
+          ))}
+        </div>
+        <div style={{ display:"flex", flexWrap:"wrap", gap:12, justifyContent:"center", animation:"fadeUp .5s .32s ease both" }}>
+          <button data-cal-link="wikolabs-team/30min" data-cal-namespace="wk30min" data-cal-config='{"layout":"month_view"}' className="wk-btn"
+            style={{ background:gold, color:"#04080F", border:"none", borderRadius:10, padding:"14px 28px", fontWeight:700, fontSize:15, cursor:"pointer", display:"flex", alignItems:"center", gap:8, fontFamily:"inherit" }}>
+            📅 {P.ctaPrimary}
+          </button>
+          <a href={`https://wa.me/261386626100?text=Bonjour%2C%20je%20souhaite%20discuter%20de%20${encodeURIComponent(P.waText)}%20avec%20Wikolabs.`}
+            target="_blank" rel="noopener noreferrer" className="wk-wa"
+            style={{ background:"#25d366", color:"#fff", borderRadius:10, padding:"14px 28px", fontWeight:700, fontSize:15, textDecoration:"none", display:"flex", alignItems:"center", gap:8 }}>
+            💬 WhatsApp
+          </a>
         </div>
       </section>
 
       {/* FEATURES */}
-      <section id="fonctionnalites" style={{ padding: "80px 24px", background: "#ffffff" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: 56 }}>
-            <h2 style={{ fontFamily: "var(--font-display, 'Passion One', cursive)", fontSize: 38, fontWeight: 700, color: "#0f172a", margin: "0 0 12px", letterSpacing: 0.5 }}>
-              De la recherche à la publication —{" "}
-              <span style={{ color: "#16a34a" }}>en pilote automatique</span>
-            </h2>
-            <p style={{ fontSize: 16, color: "#64748b", maxWidth: 520, margin: "0 auto" }}>
-              SEOWave couvre chaque étape du cycle de vie d'un article SEO haute performance.
-            </p>
-          </div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 32 }}>
-            {[
-              {
-                icon: "🔍",
-                title: "Recherche de mots-clés IA",
-                desc: "Gap analysis vs vos concurrents, opportunity scoring, clustering thématique. SEOWave trouve les mots-clés que vous raterez à la main.",
-                tags: ["Gap analysis", "Opportunity score", "Clustering"],
-              },
-              {
-                icon: "✍️",
-                title: "Rédaction SEO automatique",
-                desc: "Articles E-E-A-T compliant, NLP optimisé pour les moteurs. Schema markup JSON-LD inclus. Chaque article est unique, sourcé et vérifié.",
-                tags: ["E-E-A-T", "NLP optimisé", "Schema markup"],
-              },
-              {
-                icon: "📈",
-                title: "Publication & monitoring",
-                desc: "Sync WordPress/Webflow en un clic. Ranking tracker en temps réel. Mise à jour automatique quand l'algorithme change ou que le contenu vieillit.",
-                tags: ["WordPress/Webflow", "Ranking tracker", "Auto-updates"],
-              },
-            ].map((f) => (
-              <div key={f.title} style={{ background: "#f8fafc", borderRadius: 14, padding: 28, border: "1px solid #e2e8f0" }}>
-                <div style={{ fontSize: 36, marginBottom: 16 }}>{f.icon}</div>
-                <h3 style={{ fontFamily: "var(--font-display, 'Passion One', cursive)", fontSize: 20, fontWeight: 700, color: "#0f172a", margin: "0 0 10px", letterSpacing: 0.3 }}>{f.title}</h3>
-                <p style={{ fontSize: 14, color: "#64748b", lineHeight: 1.7, margin: "0 0 18px" }}>{f.desc}</p>
-                <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
-                  {f.tags.map((t) => (
-                    <span key={t} style={{ background: "#dcfce7", color: "#16a34a", fontSize: 11, fontWeight: 600, padding: "3px 10px", borderRadius: 12 }}>{t}</span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
+      <section id="features" style={{ padding:"80px 40px", maxWidth:1100, margin:"0 auto" }}>
+        <div style={{ textAlign:"center", marginBottom:52 }}>
+          <p style={{ fontSize:"0.68rem", color:gold, letterSpacing:"3px", textTransform:"uppercase", fontWeight:700, marginBottom:14 }}>Fonctionnalites</p>
+          <h2 style={{ fontSize:"clamp(1.8rem,3.5vw,2.8rem)", fontWeight:700, color:txt1, letterSpacing:"-0.02em", fontFamily:"'Instrument Serif',Georgia,serif", lineHeight:1.15 }}>
+            De la recherche a la publication, <em style={{ fontStyle:"italic", color:gold }}>en automatique</em>
+          </h2>
         </div>
-      </section>
-
-      {/* STATS */}
-      <section id="stats" style={{ padding: "80px 24px", background: "#f0fdf4" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: 56 }}>
-            <h2 style={{ fontFamily: "var(--font-display, 'Passion One', cursive)", fontSize: 38, fontWeight: 700, color: "#0f172a", margin: "0 0 12px", letterSpacing: 0.5 }}>
-              Des chiffres qui <span style={{ color: "#16a34a" }}>parlent d'eux-mêmes</span>
-            </h2>
-            <p style={{ fontSize: 16, color: "#64748b", maxWidth: 460, margin: "0 auto" }}>
-              Résultats observés chez nos clients actifs sur une période de 6 mois.
-            </p>
-          </div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 32 }}>
-            {[
-              { value: "+340%", label: "de trafic organique", sub: "En 6 mois grâce au volume et à la pertinence des articles" },
-              { value: "100", label: "articles/mois inclus", sub: "Recherche, rédaction, optimisation et publication comprises" },
-              { value: "0", label: "rédacteur nécessaire", sub: "L'IA gère l'intégralité du pipeline éditorial" },
-            ].map((s) => (
-              <div key={s.label} style={{ background: "#ffffff", borderRadius: 16, padding: "36px 28px", textAlign: "center", border: "2px solid #bbf7d0", boxShadow: "0 4px 24px rgba(22,163,74,0.08)" }}>
-                <div style={{ fontFamily: "var(--font-display, 'Passion One', cursive)", fontSize: 52, fontWeight: 700, color: "#16a34a", lineHeight: 1, marginBottom: 8, letterSpacing: 1 }}>{s.value}</div>
-                <div style={{ fontSize: 16, fontWeight: 600, color: "#0f172a", marginBottom: 8 }}>{s.label}</div>
-                <div style={{ fontSize: 13, color: "#64748b", lineHeight: 1.5 }}>{s.sub}</div>
-              </div>
-            ))}
-          </div>
+        <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(300px,1fr))", gap:20 }}>
+          {P.features.map((f, i) => (
+            <div key={f.title} className="wk-card" style={{ background:card, border:`1px solid ${border}`, borderRadius:20, padding:"28px 28px 24px", position:"relative", overflow:"hidden" }}>
+              <div style={{ position:"absolute", top:0, left:0, right:0, height:2, background:`linear-gradient(90deg,transparent,${i===0?gold:accent},transparent)`, opacity:.6 }} />
+              <div style={{ fontSize:"2rem", marginBottom:16 }}>{f.icon}</div>
+              <h3 style={{ fontSize:"1.05rem", fontWeight:700, color:txt1, marginBottom:10 }}>{f.title}</h3>
+              <p style={{ fontSize:"0.88rem", color:txt2, lineHeight:1.7, margin:0 }}>{f.desc}</p>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* HOW IT WORKS */}
-      <section style={{ padding: "80px 24px", background: "#ffffff" }}>
-        <div style={{ maxWidth: 900, margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: 48 }}>
-            <h2 style={{ fontFamily: "var(--font-display, 'Passion One', cursive)", fontSize: 36, fontWeight: 700, color: "#0f172a", margin: "0 0 12px", letterSpacing: 0.5 }}>
-              Actif en <span style={{ color: "#16a34a" }}>72 heures</span>
+      <section id="process" style={{ padding:"80px 40px", background:bg2 }}>
+        <div style={{ maxWidth:860, margin:"0 auto" }}>
+          <div style={{ textAlign:"center", marginBottom:48 }}>
+            <p style={{ fontSize:"0.68rem", color:gold, letterSpacing:"3px", textTransform:"uppercase", fontWeight:700, marginBottom:14 }}>Comment ca marche</p>
+            <h2 style={{ fontSize:"clamp(1.8rem,3.5vw,2.8rem)", fontWeight:700, color:txt1, letterSpacing:"-0.02em", fontFamily:"'Instrument Serif',Georgia,serif" }}>
+              Operationnel en <em style={{ fontStyle:"italic", color:accent }}>72 heures</em>
             </h2>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr", gap: 24 }}>
-            {[
-              { step: "01", title: "Audit de votre niche", desc: "SEOWave analyse votre secteur et vos concurrents en moins d'une heure." },
-              { step: "02", title: "Plan éditorial IA", desc: "100 sujets prioritaires classés par potentiel trafic et difficulté." },
-              { step: "03", title: "Rédaction & publication", desc: "Les articles sont rédigés, optimisés et publiés automatiquement." },
-              { step: "04", title: "Tracking & amélioration", desc: "Rankings monitorés, contenu mis à jour quand nécessaire." },
-            ].map((item) => (
-              <div key={item.step} style={{ textAlign: "center" }}>
-                <div style={{ width: 48, height: 48, background: "#dcfce7", border: "2px solid #16a34a", borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 16px", fontFamily: "var(--font-display, 'Passion One', cursive)", fontWeight: 700, fontSize: 16, color: "#16a34a" }}>
-                  {item.step}
+          <div style={{ display:"flex", flexDirection:"column", gap:14 }}>
+            {P.steps.map((s, i) => (
+              <div key={s.num} style={{ display:"flex", alignItems:"flex-start", gap:22, background:card, border:`1px solid ${border}`, borderRadius:18, padding:"22px 26px" }}>
+                <div style={{ flexShrink:0, width:46, height:46, background:i===0?goldDim:accentDim, border:`1px solid ${i===0?goldBorder:accentBorder}`, borderRadius:14, display:"flex", alignItems:"center", justifyContent:"center", color:i===0?gold:accent, fontWeight:800, fontSize:15 }}>
+                  {s.num}
                 </div>
-                <h4 style={{ fontSize: 14, fontWeight: 700, color: "#0f172a", margin: "0 0 8px" }}>{item.title}</h4>
-                <p style={{ fontSize: 13, color: "#64748b", lineHeight: 1.6, margin: 0 }}>{item.desc}</p>
+                <div>
+                  <h3 style={{ fontSize:"1rem", fontWeight:700, color:txt1, marginBottom:6, lineHeight:1.3 }}>{s.title}</h3>
+                  <p style={{ fontSize:"0.87rem", color:txt2, lineHeight:1.7, margin:0 }}>{s.desc}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA SECTION */}
-      <section id="contact" style={{ padding: "80px 24px", background: "#16a34a" }}>
-        <div style={{ maxWidth: 700, margin: "0 auto", textAlign: "center" }}>
-          <h2 style={{ fontFamily: "var(--font-display, 'Passion One', cursive)", fontSize: 42, fontWeight: 700, color: "#ffffff", margin: "0 0 16px", lineHeight: 1.15, letterSpacing: 0.5 }}>
-            Transformez votre blog en<br />machine à leads organique
-          </h2>
-          <p style={{ fontSize: 16, color: "#bbf7d0", margin: "0 0 36px", lineHeight: 1.7 }}>
-            Rejoignez les équipes qui ont multiplié leur trafic par 4 sans recruter un seul rédacteur. Démo personnalisée sur votre secteur — sans engagement.
-          </p>
-          <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
-            <button data-cal-link="wikolabs-team/30min" data-cal-namespace="wk30min" data-cal-config='{"layout":"month_view"}' type="button" target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", background: "#ffffff", color: "#16a34a", padding: "16px 36px", borderRadius: 12, textDecoration: "none", fontSize: 16, fontWeight: 700, fontFamily: "var(--font-display, 'Passion One', cursive)", letterSpacing: 0.5 }}>
-              📅 Réserver un créneau →
+      {/* TESTIMONIALS */}
+      <section style={{ padding:"80px 40px", maxWidth:900, margin:"0 auto" }}>
+        <div style={{ textAlign:"center", marginBottom:44 }}>
+          <p style={{ fontSize:"0.68rem", color:gold, letterSpacing:"3px", textTransform:"uppercase", fontWeight:700, marginBottom:14 }}>Temoignages</p>
+          <h2 style={{ fontSize:"clamp(1.6rem,3vw,2.4rem)", fontWeight:700, color:txt1, fontFamily:"'Instrument Serif',Georgia,serif" }}>Ce qu'en disent nos clients</h2>
+        </div>
+        <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(340px,1fr))", gap:20 }}>
+          {P.testimonials.map((t, i) => (
+            <div key={i} style={{ background:card, border:`1px solid ${border}`, borderLeft:`3px solid ${i===0?gold:accent}`, borderRadius:20, padding:"26px 26px 22px" }}>
+              <p style={{ fontSize:"0.92rem", color:txt2, lineHeight:1.75, fontStyle:"italic", marginBottom:20 }}>&ldquo;{t.quote}&rdquo;</p>
+              <div style={{ display:"flex", alignItems:"center", gap:12 }}>
+                <div style={{ width:38, height:38, borderRadius:"50%", background:i===0?goldDim:accentDim, border:`1px solid ${i===0?goldBorder:accentBorder}`, display:"flex", alignItems:"center", justifyContent:"center", fontSize:16 }}>👤</div>
+                <div>
+                  <div style={{ fontSize:"0.9rem", fontWeight:700, color:txt1 }}>{t.author}</div>
+                  <div style={{ fontSize:"0.72rem", color:txt3 }}>{t.role}</div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section id="cta" style={{ padding:"0 40px 100px", maxWidth:860, margin:"0 auto" }}>
+        <div style={{ background:card, border:`1px solid ${goldBorder}`, borderRadius:24, padding:"64px 48px", textAlign:"center", backgroundImage:`radial-gradient(ellipse at 50% 0%, ${goldDim} 0%, transparent 65%)` }}>
+          <p style={{ fontSize:"0.68rem", color:gold, letterSpacing:"3px", textTransform:"uppercase", fontWeight:700, marginBottom:16 }}>Demarrer</p>
+          <h2 style={{ fontSize:"clamp(1.8rem,3.5vw,2.8rem)", fontWeight:700, color:txt1, marginBottom:14, letterSpacing:"-0.02em", fontFamily:"'Instrument Serif',Georgia,serif" }}>{P.ctaTitle}</h2>
+          <p style={{ color:txt2, fontSize:"1rem", marginBottom:36, lineHeight:1.7 }}>{P.ctaDesc}</p>
+          <div style={{ display:"flex", flexWrap:"wrap", gap:12, justifyContent:"center" }}>
+            <button data-cal-link="wikolabs-team/30min" data-cal-namespace="wk30min" data-cal-config='{"layout":"month_view"}' className="wk-btn"
+              style={{ background:gold, color:"#04080F", border:"none", borderRadius:10, padding:"14px 28px", fontWeight:700, fontSize:15, cursor:"pointer", display:"flex", alignItems:"center", gap:8, fontFamily:"inherit" }}>
+              📅 {P.ctaPrimary}
             </button>
-            <a href="https://wa.me/261386626100?text=Bonjour%2C%20je%20souhaite%20discuter%20de%20SEOWave%20avec%20Wikolabs." target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", background: "#25d366", borderColor: "#25d366", color: "#fff", padding: "16px 36px", borderRadius: 12, textDecoration: "none", fontSize: 16, fontWeight: 700, fontFamily: "var(--font-display, 'Passion One', cursive)", letterSpacing: 0.5 }}>
-              💬 WhatsApp →
+            <a href={`https://wa.me/261386626100?text=Bonjour%2C%20je%20souhaite%20discuter%20de%20${encodeURIComponent(P.waText)}%20avec%20Wikolabs.`}
+              target="_blank" rel="noopener noreferrer" className="wk-wa"
+              style={{ background:"#25d366", color:"#fff", borderRadius:10, padding:"14px 28px", fontWeight:700, fontSize:15, textDecoration:"none", display:"flex", alignItems:"center", gap:8 }}>
+              💬 WhatsApp
             </a>
-          </div>
-          <div style={{ marginTop: 20, fontSize: 13, color: "#86efac" }}>
-            Réponse sous 24h · Audit de niche offert · Aucun CB requis
           </div>
         </div>
       </section>
 
       {/* FOOTER */}
-      <footer style={{ background: "#052e16", padding: "32px 24px" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 12 }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-            <div style={{ width: 28, height: 28, background: "#16a34a", borderRadius: 6, display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <span style={{ color: "#fff", fontSize: 14 }}>〜</span>
-            </div>
-            <span style={{ color: "#86efac", fontSize: 14, fontFamily: "var(--font-display, 'Passion One', cursive)", letterSpacing: 0.5 }}>SEOWave</span>
+      <footer style={{ borderTop:`1px solid ${border}`, padding:"32px 40px" }}>
+        <div style={{ maxWidth:1200, margin:"0 auto", display:"flex", flexWrap:"wrap", justifyContent:"space-between", alignItems:"center", gap:16 }}>
+          <div>
+            <span style={{ fontWeight:800, fontSize:16, color:txt1 }}>{P.name}</span><span style={{ color:gold }}>.</span>
+            <span style={{ display:"block", fontSize:12, color:txt3, marginTop:3 }}>{P.footerTagline}</span>
           </div>
-          <div style={{ color: "#4ade80", fontSize: 13 }}>
-            © 2025 SEOWave — Un produit{" "}
-            <a href="https://wikolabs.com" style={{ color: "#86efac", textDecoration: "none" }}>Wikolabs</a>
-          </div>
-          <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
-            <a href="mailto:team@wikolabs.com" style={{ color: "#4ade80", fontSize: 13, textDecoration: "none" }}>team@wikolabs.com</a>
-            <span style={{ color: "#4ade80" }}>·</span>
-            <a href="tel:+261386626100" style={{ color: "#4ade80", fontSize: 13, textDecoration: "none" }}>+261 38 66 261 00</a>
-            <span style={{ color: "#4ade80" }}>·</span>
-            <button data-cal-link="wikolabs-team/30min" data-cal-namespace="wk30min" data-cal-config='{"layout":"month_view"}' type="button" target="_blank" rel="noopener noreferrer" style={{ color: "#4ade80", fontSize: 13, textDecoration: "none" }} style={{cursor:"pointer",background:"none",border:"none",padding:0,font:"inherit",color:"inherit",textDecoration:"none"}}>Prendre RDV</button>
+          <p style={{ fontSize:13, color:txt3 }}>© 2026 {P.name} — Un produit <a href="https://wikolabs.com" style={{ color:txt2, textDecoration:"none" }}>Wikolabs</a></p>
+          <div style={{ display:"flex", flexWrap:"wrap", gap:16, fontSize:13, alignItems:"center" }}>
+            <a href="mailto:team@wikolabs.com" style={{ color:txt3, textDecoration:"none" }}>team@wikolabs.com</a>
+            <span style={{ color:txt3 }}>·</span>
+            <button data-cal-link="wikolabs-team/30min" data-cal-namespace="wk30min" data-cal-config='{"layout":"month_view"}' style={{ background:"none", border:"none", color:txt3, fontSize:13, cursor:"pointer", fontFamily:"inherit", padding:0 }}>Prendre RDV</button>
           </div>
         </div>
       </footer>
-
     </div>
   );
 }
