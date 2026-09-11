@@ -1,22 +1,22 @@
-﻿"use client";
+"use client";
 import { useState } from "react";
 
 const PRODUCT = "SEOWave";
 
 const PAL = {
-  bg: "#F8FAFC",
-  bg2: "#E2E8F0",
-  surface: "rgba(0,0,0,0.035)",
-  surfaceHover: "rgba(0,0,0,0.06)",
-  border: "rgba(0,0,0,0.08)",
-  txt1: "#0F172A",
-  txt2: "#475569",
-  txt3: "#94A3B8",
-  accent: "#475569",
-  accentSoft: "rgba(71,85,105,0.10)",
-  accentBorder: "rgba(71,85,105,0.35)",
-  accentGlow: "rgba(71,85,105,0.18)",
-  navBg: "rgba(248,250,252,0.85)",
+  bg: "#1A1420",
+  bg2: "#221A29",
+  surface: "rgba(255,255,255,0.06)",
+  surfaceHover: "rgba(255,255,255,0.09)",
+  border: "rgba(255,255,255,0.12)",
+  txt1: "#F2ECF1",
+  txt2: "#C7BDC8",
+  txt3: "#8F8393",
+  accent: "#F2C230",
+  accentSoft: "rgba(242,194,48,0.14)",
+  accentBorder: "rgba(242,194,48,0.40)",
+  accentGlow: "rgba(242,194,48,0.18)",
+  navBg: "rgba(26,20,32,0.88)",
 };
 
 export default function DemoPage() {
@@ -34,26 +34,26 @@ export default function DemoPage() {
   const [staticMode, setStaticMode] = useState(false);
 
   const t = lang === "fr" ? {
-    back: "Retour", title: "Demo", sub: PRODUCT + " — analyse keywords + audit on-page",
-    desc: "Saisissez 1 a 3 mots-cles cibles et l'URL a optimiser. L'agent IA produit un rapport SEO complet : volume, difficulte, recommandations on-page. Aucune connexion reelle a Search Console, Ahrefs, SEMrush — c'est un POC qui montre la logique de production.",
-    inputLabel: "Vos mots-cles cibles",
-    plK1: "Mot-cle #1 (ex: logiciel facturation)",
-    plK2: "Mot-cle #2 (optionnel)",
-    plK3: "Mot-cle #3 (optionnel)",
+    back: "Retour", title: "Démo", sub: PRODUCT + ", analyse keywords + audit on-page",
+    desc: "Saisissez 1 à 3 mots-clés cibles et l'URL a optimiser. L'agent IA produit un rapport SEO complet : volume, difficulte, recommandations on-page. Aucune connexion réelle a Search Console, Ahrefs, SEMrush, c'est un POC qui montre la logique de production.",
+    inputLabel: "Vos mots-clés cibles",
+    plK1: "Mot-clé #1 (ex: logiciel facturation)",
+    plK2: "Mot-clé #2 (optionnel)",
+    plK3: "Mot-clé #3 (optionnel)",
     plUrl: "URL cible (ex: https://exemple.com/page)",
     marketLabel: "Marche",
     generate: "Analyser le SEO", generating: "Analyse en cours...",
-    briefTitle: "Rapport SEO", emptyHint: "Le rapport s'affiche ici une fois genere.",
-    btnGsc: "Verifier Search Console", btnAhrefs: "Push vers Ahrefs", btnCms: "Appliquer sur CMS",
-    gscMock: "Verif Search Console declenchee (mode demo, pas de connexion reelle Google)",
-    ahrefsMock: "Push vers Ahrefs Site Audit (mode demo, pas de connexion reelle Ahrefs)",
-    cmsMock: "Modifications appliquees sur CMS (WordPress/Webflow/Shopify) (mode demo, pas de connexion reelle)",
-    fallback: "Mode statique : la cle LLM sera ajoutee au prochain deploiement.",
-    poweredBy: "Modele :",
-    note: "DEMO POC — aucune connexion reelle a Search Console, Ahrefs, SEMrush, Screaming Frog. L'IA imagine les volumes pour la demonstration.",
+    briefTitle: "Rapport SEO", emptyHint: "Le rapport s'affiche ici une fois généré.",
+    btnGsc: "Vérifier Search Console", btnAhrefs: "Push vers Ahrefs", btnCms: "Appliquer sur CMS",
+    gscMock: "Verif Search Console declenchee (mode démo, pas de connexion réelle Google)",
+    ahrefsMock: "Push vers Ahrefs Site Audit (mode démo, pas de connexion réelle Ahrefs)",
+    cmsMock: "Modifications appliquees sur CMS (WordPress/Webflow/Shopify) (mode démo, pas de connexion réelle)",
+    fallback: "Mode statique : la clé LLM sera ajoutée au prochain déploiement.",
+    poweredBy: "Modèle :",
+    note: "DEMO POC, aucune connexion réelle a Search Console, Ahrefs, SEMrush, Screaming Frog. L'IA imagine les volumes pour la démonstration.",
   } : {
-    back: "Back", title: "Demo", sub: PRODUCT + " — keyword analysis + on-page audit",
-    desc: "Enter 1-3 target keywords and the URL to optimize. The AI agent produces a complete SEO report: volume, difficulty, on-page recommendations. No real connection to Search Console, Ahrefs, SEMrush — this is a POC showing the production logic.",
+    back: "Back", title: "Demo", sub: PRODUCT + ", keyword analysis + on-page audit",
+    desc: "Enter 1-3 target keywords and the URL to optimize. The AI agent produces a complete SEO report: volume, difficulty, on-page recommendations. No real connection to Search Console, Ahrefs, SEMrush, this is a POC showing the production logic.",
     inputLabel: "Your target keywords",
     plK1: "Keyword #1 (e.g. invoice software)",
     plK2: "Keyword #2 (optional)",
@@ -68,7 +68,7 @@ export default function DemoPage() {
     cmsMock: "Changes applied on CMS (WordPress/Webflow/Shopify) (demo mode, no real connection)",
     fallback: "Static mode: LLM key will be added at next deploy.",
     poweredBy: "Model:",
-    note: "DEMO POC — no real connection to Search Console, Ahrefs, SEMrush, Screaming Frog. The AI imagines volumes for demonstration.",
+    note: "DEMO POC, no real connection to Search Console, Ahrefs, SEMrush, Screaming Frog. The AI imagines volumes for demonstration.",
   };
 
   async function generate() {
@@ -112,17 +112,17 @@ export default function DemoPage() {
       <style>{`
         *, *::before, *::after { box-sizing: border-box; }
         body { margin: 0; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
-        .wk-input { width: 100%; padding: 12px 14px; border-radius: 10px; background: ${PAL.surface}; border: 1px solid ${PAL.border}; color: ${PAL.txt1}; font-family: inherit; font-size: 14px; transition: border-color .2s, background .2s; }
+        .wk-input { width: 100%; padding: 12px 14px; border-radius: 6px; background: ${PAL.surface}; border: 1px solid ${PAL.border}; color: ${PAL.txt1}; font-family: inherit; font-size: 14px; transition: border-color .2s, background .2s; }
         .wk-input:focus { outline: none; border-color: ${PAL.accent}; background: ${PAL.surfaceHover}; }
-        .wk-btn-primary { background: ${PAL.accent}; color: #FFFFFF; border: none; border-radius: 10px; padding: 13px 22px; font-weight: 700; font-size: 14px; cursor: pointer; font-family: inherit; transition: opacity .2s, transform .2s; display: inline-flex; align-items: center; gap: 8px; }
+        .wk-btn-primary { background: ${PAL.accent}; color: #FFFFFF; border: none; border-radius: 6px; padding: 13px 22px; font-weight: 700; font-size: 14px; cursor: pointer; font-family: inherit; transition: opacity .2s, transform .2s; display: inline-flex; align-items: center; gap: 8px; }
         .wk-btn-primary:hover { opacity: .9; transform: translateY(-1px); }
         .wk-btn-primary:disabled { opacity: .5; cursor: not-allowed; transform: none; }
-        .wk-btn-ghost { background: ${PAL.surface}; color: ${PAL.txt1}; border: 1px solid ${PAL.border}; border-radius: 10px; padding: 9px 14px; font-weight: 600; font-size: 13px; cursor: pointer; font-family: inherit; transition: background .2s, border-color .2s; display: inline-flex; align-items: center; gap: 6px; }
+        .wk-btn-ghost { background: ${PAL.surface}; color: ${PAL.txt1}; border: 1px solid ${PAL.border}; border-radius: 6px; padding: 9px 14px; font-weight: 600; font-size: 13px; cursor: pointer; font-family: inherit; transition: background .2s, border-color .2s; display: inline-flex; align-items: center; gap: 6px; }
         .wk-btn-ghost:hover { background: ${PAL.surfaceHover}; border-color: ${PAL.accentBorder}; }
         .wk-md p, .wk-md ul { margin: 0 0 10px; }
         .wk-md ul { padding-left: 18px; }
         .wk-md li { margin-bottom: 4px; line-height: 1.65; }
-        .wk-md strong { color: ${PAL.accent}; font-weight: 700; display: block; margin-top: 10px; margin-bottom: 4px; font-size: 0.78rem; letter-spacing: 1.5px; text-transform: uppercase; }
+        .wk-md strong { color: ${PAL.accent}; font-weight: 700; display: block; margin-top: 10px; margin-bottom: 4px; font-size: 0.95rem;   }
         @media (max-width: 768px) {
           .demo-grid { grid-template-columns: 1fr !important; }
         }
@@ -130,7 +130,7 @@ export default function DemoPage() {
 
       <nav style={{ padding: "16px 32px", borderBottom: `1px solid ${PAL.border}`, display: "flex", justifyContent: "space-between", alignItems: "center", background: PAL.navBg, backdropFilter: "blur(20px)", position: "sticky", top: 0, zIndex: 10 }}>
         <a href="/" style={{ color: PAL.accent, textDecoration: "none", fontSize: 14, fontWeight: 600 }}>
-          ← {t.back} {PRODUCT}<span style={{ color: PAL.accent }}>.</span>
+          {t.back} {PRODUCT}<span style={{ color: PAL.accent }}>.</span>
         </a>
         <div style={{ display: "inline-flex", border: `1px solid ${PAL.border}`, borderRadius: 100, padding: 2, background: PAL.surface }}>
           <button onClick={() => setLang("fr")} style={{ background: lang === "fr" ? PAL.accent : "transparent", color: lang === "fr" ? "#FFFFFF" : PAL.txt2, border: "none", padding: "4px 12px", fontSize: 11, fontWeight: 700, cursor: "pointer", borderRadius: 100, fontFamily: "inherit" }}>FR</button>
@@ -139,21 +139,21 @@ export default function DemoPage() {
       </nav>
 
       <main style={{ flex: 1, padding: "32px", maxWidth: 1200, margin: "0 auto", width: "100%" }}>
-        <h1 style={{ fontFamily: "'Instrument Serif',Georgia,serif", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", fontWeight: 700, margin: "0 0 6px" }}>
-          {t.title} · <em style={{ fontStyle: "italic", color: PAL.accent }}>{PRODUCT}</em>
+        <h1 style={{ fontFamily: "var(--font-display), 'Bricolage Grotesque', sans-serif", letterSpacing: "-0.02em", fontSize: "clamp(1.8rem,3.5vw,2.6rem)", fontWeight: 700, margin: "0 0 6px" }}>
+          {t.title} <em style={{ fontStyle: "normal", color: PAL.accent }}>{PRODUCT}</em>
         </h1>
         <p style={{ color: PAL.txt2, fontSize: "0.95rem", lineHeight: 1.65, maxWidth: 720, margin: "0 0 6px" }}>{t.sub}</p>
         <p style={{ color: PAL.txt3, fontSize: "0.78rem", lineHeight: 1.55, maxWidth: 720, margin: "0 0 28px" }}>{t.desc}</p>
 
         <div className="demo-grid" style={{ display: "grid", gridTemplateColumns: "360px 1fr", gap: 24 }}>
-          <section style={{ background: PAL.surface, border: `1px solid ${PAL.border}`, borderRadius: 16, padding: 22 }}>
-            <h2 style={{ fontSize: "0.72rem", color: PAL.txt3, textTransform: "uppercase", letterSpacing: 2, fontWeight: 700, margin: "0 0 14px" }}>{t.inputLabel}</h2>
+          <section style={{ background: PAL.surface, border: `1px solid ${PAL.border}`, borderRadius: 6, padding: 22 }}>
+            <h2 style={{ fontSize: "0.92rem", color: PAL.txt2, fontWeight: 700, margin: "0 0 14px" }}>{t.inputLabel}</h2>
             <div style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 18 }}>
               <input className="wk-input" value={k1} onChange={(e) => setK1(e.target.value)} placeholder={t.plK1} />
               <input className="wk-input" value={k2} onChange={(e) => setK2(e.target.value)} placeholder={t.plK2} />
               <input className="wk-input" value={k3} onChange={(e) => setK3(e.target.value)} placeholder={t.plK3} />
               <input className="wk-input" value={url} onChange={(e) => setUrl(e.target.value)} placeholder={t.plUrl} />
-              <label style={{ color: PAL.txt3, fontSize: 11, textTransform: "uppercase", letterSpacing: 1.5, fontWeight: 700, marginTop: 4 }}>{t.marketLabel}</label>
+              <label style={{ color: PAL.txt3, fontSize: 11, fontWeight: 700, marginTop: 4 }}>{t.marketLabel}</label>
               <select className="wk-input" value={market} onChange={(e) => setMarket(e.target.value)}>
                 <option value="FR">France (FR)</option>
                 <option value="US">United States (US)</option>
@@ -163,15 +163,15 @@ export default function DemoPage() {
               </select>
             </div>
             <button className="wk-btn-primary" disabled={loading} onClick={generate} style={{ width: "100%", justifyContent: "center" }}>
-              {loading ? `⏳ ${t.generating}` : `🌊 ${t.generate}`}
+              {loading ? `${t.generating}` : `${t.generate}`}
             </button>
             {error && <div style={{ marginTop: 12, color: "#B91C1C", fontSize: 13, padding: "8px 12px", background: "rgba(220,38,38,0.08)", border: "1px solid rgba(220,38,38,0.3)", borderRadius: 8 }}>{error}</div>}
             <p style={{ color: PAL.txt3, fontSize: 11, lineHeight: 1.5, marginTop: 18, marginBottom: 0, paddingTop: 14, borderTop: `1px solid ${PAL.border}` }}>{t.note}</p>
           </section>
 
-          <section style={{ background: PAL.bg2, border: `1px solid ${PAL.border}`, borderRadius: 16, padding: 22, minHeight: 420, display: "flex", flexDirection: "column" }}>
+          <section style={{ background: PAL.bg2, border: `1px solid ${PAL.border}`, borderRadius: 6, padding: 22, minHeight: 420, display: "flex", flexDirection: "column" }}>
             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 16 }}>
-              <h2 style={{ fontSize: "0.72rem", color: PAL.txt3, textTransform: "uppercase", letterSpacing: 2, fontWeight: 700, margin: 0, display: "flex", alignItems: "center", gap: 8 }}>
+              <h2 style={{ fontSize: "0.92rem", color: PAL.txt2, fontWeight: 700, margin: 0, display: "flex", alignItems: "center", gap: 8 }}>
                 <span style={{ width: 8, height: 8, borderRadius: "50%", background: brief ? "#16A34A" : PAL.txt3 }} />
                 {t.briefTitle}
               </h2>
@@ -188,9 +188,9 @@ export default function DemoPage() {
 
             {brief && (
               <div style={{ display: "flex", flexWrap: "wrap", gap: 10, marginTop: 18, paddingTop: 18, borderTop: `1px solid ${PAL.border}` }}>
-                <button className="wk-btn-ghost" onClick={() => showToast(t.gscMock)}>🔎 {t.btnGsc}</button>
-                <button className="wk-btn-ghost" onClick={() => showToast(t.ahrefsMock)}>📊 {t.btnAhrefs}</button>
-                <button className="wk-btn-ghost" onClick={() => showToast(t.cmsMock)}>🛠️ {t.btnCms}</button>
+                <button className="wk-btn-ghost" onClick={() => showToast(t.gscMock)}>{t.btnGsc}</button>
+                <button className="wk-btn-ghost" onClick={() => showToast(t.ahrefsMock)}>{t.btnAhrefs}</button>
+                <button className="wk-btn-ghost" onClick={() => showToast(t.cmsMock)}>{t.btnCms}</button>
               </div>
             )}
             {staticMode && <div style={{ marginTop: 14, color: PAL.txt3, fontSize: 12, fontStyle: "italic" }}>{t.fallback}</div>}
@@ -199,7 +199,7 @@ export default function DemoPage() {
       </main>
 
       {toast && (
-        <div style={{ position: "fixed", bottom: 24, left: "50%", transform: "translateX(-50%)", background: PAL.bg, border: `1px solid ${PAL.accentBorder}`, borderRadius: 12, padding: "12px 20px", color: PAL.txt1, fontSize: 13, fontWeight: 600, zIndex: 50, backdropFilter: "blur(20px)", boxShadow: "0 8px 28px rgba(0,0,0,0.15)" }}>
+        <div style={{ position: "fixed", bottom: 24, left: "50%", transform: "translateX(-50%)", background: PAL.bg, border: `1px solid ${PAL.accentBorder}`, borderRadius: 8, padding: "12px 20px", color: PAL.txt1, fontSize: 13, fontWeight: 600, zIndex: 50, backdropFilter: "blur(20px)", boxShadow: "0 8px 28px rgba(0,0,0,0.15)" }}>
           ✓ {toast}
         </div>
       )}
